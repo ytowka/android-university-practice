@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AndroidViews</string>
+    <string name="calculate">рассчитать</string>
+    <string name="name">имя</string>
+    <string name="tall">рост</string>
+    <string name="weight">вес</string>
+    <string name="age">возраст</string>
+    <string name="error">Данные введены некорректно.</string>
+    <string name="answer">Ответ: %d</string>
+</resources>
