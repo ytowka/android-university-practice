@@ -5,41 +5,23 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
+import com.danilkha.androidviews.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    val text: TextView by lazy { findViewById(R.id.text) }
-    val nameET: EditText by lazy { findViewById(R.id.name) }
-    val tallET: EditText by lazy { findViewById(R.id.tall) }
-    val weightET: EditText by lazy { findViewById(R.id.weight) }
-    val ageET: EditText by lazy { findViewById(R.id.age) }
-    val calc: Button by lazy { findViewById(R.id.calc) }
-
+    lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        calc.setOnClickListener {
-            val tall = tallET.toInt()?.takeIf { it in 1..250 }
-            val weight = weightET.toInt().takeIf { it in 1..250 }
-            val age = ageET.toInt().takeIf { it in 1..150 }
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
 
-            if(tall != null && weight != null && age != null && nameET.text.toString().isNotBlank()){
-                val answer = calc(tall, weight, age)
-                text.text = getString(R.string.answer, answer)
-            }else{
-                text.text = getString(R.string.error)
-            }
-        }
+        binding.bottomNav.setupWithNavController(navController)
     }
-
-    private fun calc(
-        tall: Int,
-        weight: Int,
-        age: Int,
-    ): Int {
-        return (10 * weight + 6.25 * tall - 5 * age - 5).toInt()
-    }
-
-    private fun EditText.toInt(): Int? = text.toString().toIntOrNull()
 }

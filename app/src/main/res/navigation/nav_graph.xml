@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ale">
+
+    <fragment
+        android:id="@+id/ale"
+        android:name="com.danilkha.androidviews.fragments.MainFragment"
+        android:label="MainFragment" >
+
+        <action
+            android:id="@+id/navigateDepth"
+            app:destination="@id/depthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/end"
+        android:name="com.danilkha.androidviews.fragments.FifthFragment"
+        android:label="FifthFragment" />
+    <fragment
+        android:id="@+id/who"
+        android:name="com.danilkha.androidviews.fragments.FourthFragment"
+        android:label="FourthFragment" />
+    <fragment
+        android:id="@+id/money"
+        android:name="com.danilkha.androidviews.fragments.SecondFragment"
+        android:label="SecondFragment" />
+    <fragment
+        android:id="@+id/question"
+        android:name="com.danilkha.androidviews.fragments.ThirdFragment"
+        android:label="ThirdFragment" />
+    <fragment
+        android:id="@+id/depthFragment"
+        android:name="com.danilkha.androidviews.fragments.DepthFragment"
+        android:label="DepthFragment" >
+        <argument
+            app:nullable="true"
+            android:name="name"
+            app:argType="string" />
+    </fragment>
+</navigation>

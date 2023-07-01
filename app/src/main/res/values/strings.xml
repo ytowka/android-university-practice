@@ -7,4 +7,15 @@
     <string name="age">возраст</string>
     <string name="error">Данные введены некорректно.</string>
     <string name="answer">Ответ: %d</string>
+
+    <string name="ale">алё</string>
+    <string name="money">деньги</string>
+    <string name="question">да?</string>
+    <string name="person">Тереньтев М.П.</string>
+    <string name="end">все</string>
+    <string name="dialogStart">— Да? \n— Алё! \n— Да да?</string>
+    <string name="dialog_money">— Ну как там с деньгами?\n— А?\n— Как с деньгами-то там?\n— Чё с деньгами?\n— Чё?</string>
+    <string name="whoAreYou">— Куда ты звонишь?\n— Тебе звоню.\n— Кому?\n— Ну тебе.\n— Кому тебе?\n— А вот тебе вот.\n— Ты кто такой?</string>
+    <string name="MihalPalich">— Михал Палыч.\n— Какой Михал Палыч?\n— Терентьев.\n— Такого не знаю, ты ошибся номером, друг.\n— Кто?\n— Ты.</string>
+    <string name="dialogEnd">— Чё с деньгами?\n— Какими деньгами?\n— Ну которые я внес в капитал.\n— Куда?\n— В капитал прожиточного минимума.\n— Ты пьяный или кто, сынок?\n— Я тре... Я Михал Палыч Терентьев.\n— Кто такой?\n— Пьяный.\n— Вот именно, ну и все, завяжи лямку</string>
 </resources>
