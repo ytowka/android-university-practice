@@ -10,32 +10,15 @@
         android:label="MainFragment" >
 
         <action
-            android:id="@+id/navigateDepth"
-            app:destination="@id/depthFragment" />
+            android:id="@+id/navigateInfo"
+            app:destination="@id/infoFragment" />
     </fragment>
     <fragment
-        android:id="@+id/end"
-        android:name="com.danilkha.androidviews.fragments.FifthFragment"
-        android:label="FifthFragment" />
-    <fragment
-        android:id="@+id/who"
-        android:name="com.danilkha.androidviews.fragments.FourthFragment"
-        android:label="FourthFragment" />
-    <fragment
-        android:id="@+id/money"
-        android:name="com.danilkha.androidviews.fragments.SecondFragment"
-        android:label="SecondFragment" />
-    <fragment
-        android:id="@+id/question"
-        android:name="com.danilkha.androidviews.fragments.ThirdFragment"
-        android:label="ThirdFragment" />
-    <fragment
-        android:id="@+id/depthFragment"
-        android:name="com.danilkha.androidviews.fragments.DepthFragment"
-        android:label="DepthFragment" >
+        android:id="@+id/infoFragment"
+        android:name="com.danilkha.androidviews.fragments.InfoFragment"
+        android:label="InfoFragment" >
         <argument
-            app:nullable="true"
-            android:name="name"
-            app:argType="string" />
+            android:name="id"
+            app:argType="long" />
     </fragment>
 </navigation>
